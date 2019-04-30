@@ -1,3 +1,3 @@
 my-arch-config
 bios+gnome+softwares
-put in bash
+just input the codes in bash
