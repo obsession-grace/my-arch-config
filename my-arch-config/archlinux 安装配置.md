@@ -7,7 +7,9 @@
 ### 1.1 WiFi联网
 
 ```shelll
-wifi-menu 
+iwctl
+station wlan0 scan
+station wlan0 connect wifiname
 ping www.baidu.com
 ```
 
@@ -32,7 +34,7 @@ swapon /dev/sda2
 ```
 vim /etc/pacman.d/mirrorlist #修改国内源 /China 查找中国源，2dd剪切，gg到文件开头，p粘贴
 pacman -Syy #更新源
-pacstrap /mnt base base-devel
+pacstrap /mnt base base-devel linux firmware
 ```
 
 ### 1.4 生成分区表 并切换root
@@ -80,7 +82,7 @@ hwclock --systohc --utc
 
 ```
 pacman -S intel-ucode #intel 编码
-pacman -S x86-video-intel
+pacman -S xf86-video-intel
 ```
 
 ### 1.10 组、用户
